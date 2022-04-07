@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/cardview_default_radius"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:padding="16dp"
+        android:layout_margin="@dimen/cardview_default_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="1.0"
+            android:shadowDx="2"
+            android:text="Type Name You Want To Encrypt"
+            android:shadowDy="2"
+            android:typeface="serif" />
+
+    <EditText
+
+        android:background="@drawable/edittext_shape"
+        android:id="@+id/edEncryptName"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/purple_500"
+        android:id="@+id/btn_encrypt"
+        android:text="Encrypt"/>
+
+        <TextView
+            android:id="@+id/tvEncryptResult"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="1.0"
+            android:shadowDx="2"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Results..."
+            android:shadowDy="2"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/purple_500"
+            android:id="@+id/btn_decrypt"
+            android:text="Decrypt"/>
+
+        <TextView
+            android:id="@+id/tvDecryptResult"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowRadius="1.0"
+            android:shadowDx="2"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Results..."
+            android:shadowDy="2"
+            android:typeface="serif" />
+
+    </LinearLayout>
+</RelativeLayout>
