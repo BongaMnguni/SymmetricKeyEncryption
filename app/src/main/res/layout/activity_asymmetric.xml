@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/cardview_default_radius"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutAsymmetric">
+
+        <LinearLayout
+            android:id="@+id/cont"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            android:layout_margin="@dimen/cardview_default_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:hint="Type Name You Want To Encrypt"
+                android:background="@drawable/edittext_shape"
+                android:id="@+id/aedEncryptName"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowRadius="1.0"
+                android:shadowDx="2"
+                android:textColor="@color/design_default_color_secondary_variant"
+                android:text="Assign Public key and Encrypt"
+                android:shadowDy="2"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/purple_500"
+                android:id="@+id/abtn_encrypt"
+                android:text="Encrypt"/>
+
+            <TextView
+                android:id="@+id/atvEncryptResult"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowRadius="1.0"
+                android:shadowDx="2"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Results..."
+                android:shadowDy="2"
+                android:typeface="serif" />
+
+            <TextView
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowRadius="1.0"
+                android:shadowDx="2"
+                android:textColor="@color/design_default_color_secondary_variant"
+                android:text="Assign Private key and Decrypt"
+                android:shadowDy="2"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/purple_500"
+                android:id="@+id/abtn_decrypt"
+                android:text="Decrypt"/>
+
+            <TextView
+                android:id="@+id/atvDecryptResult"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shadowRadius="1.0"
+                android:shadowDx="2"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Results..."
+                android:shadowDy="2"
+                android:layout_marginBottom="20dp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_below="@+id/cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/purple_500"
+            android:textColor="@color/yellow"
+            android:id="@+id/btn_symmetric"
+            android:text="Symmetric Key"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

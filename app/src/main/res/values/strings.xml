@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Symetric Key Encryption</string>
+    <string name="title">Asymmetric key Encryption</string>
+    <string name="app_name">Symmetric key Encryption</string>
     <string name="mutlogo">mutlogo</string>
     <string name="symmetric">Symmetric</string>
     <string name="key_encryption">key Encryption</string>
