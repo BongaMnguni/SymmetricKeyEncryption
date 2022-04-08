@@ -33,22 +33,28 @@ AppCompatButton btnEncrypt,btnDecrypt;
         edEncryptName = findViewById(R.id.edEncryptName);
 
         btnEncrypt.setOnClickListener(view -> {
-            targetString = edEncryptName.getText().toString();
+           try{
+               targetString = edEncryptName.getText().toString();
+               encryptedString = aes256.makeAes(targetString.getBytes(), Cipher.ENCRYPT_MODE);
+               Log.d("Encoded string: ", new String(encryptedString));
+               tvResultEncrypted.setText(new String(encryptedString));
+           }catch (Exception e){
+               tvResultEncrypted.setText(e.toString());
+           }
 
-            encryptedString = aes256.makeAes(targetString.getBytes(), Cipher.ENCRYPT_MODE);
-            Log.d("Encoded string: ", new String(encryptedString));
-            tvResultEncrypted.setText(new String(encryptedString));
         });
 
         btnDecrypt.setOnClickListener(view -> {
-            byte[] decodedString = aes256.makeAes(encryptedString, Cipher.DECRYPT_MODE);
-            Log.d("Decoded string: ", new String(decodedString));
-            tvResultDecrypted.setText(new String(decodedString));
+            try{
+                byte[] decodedString = aes256.makeAes(encryptedString, Cipher.DECRYPT_MODE);
+                Log.d("Decoded string: ", new String(decodedString));
+                tvResultDecrypted.setText(new String(decodedString));
+            }catch(Exception e){
+                tvResultDecrypted.setText(e.toString());
+            }
+
         });
 
-
-
     }
-
 
 }
